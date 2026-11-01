@@ -1,23 +1,27 @@
-import { Card, CardContent } from '@/components/ui/card';
-import { AlertCircle } from 'lucide-react';
+import { Link } from 'wouter';
+import { ArrowLeft, Sparkles } from 'lucide-react';
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen w-full flex items-center justify-center bg-gray-50">
-      <Card className="w-full max-w-md mx-4">
-        <CardContent className="pt-6">
-          <div className="flex mb-4 gap-2">
-            <AlertCircle className="h-8 w-8 text-red-500" />
-            <h1 className="text-2xl font-bold text-gray-900">
-              404 Page Not Found
-            </h1>
-          </div>
-
-          <p className="mt-4 text-sm text-gray-600">
-            Did you forget to add the page to the router?
-          </p>
-        </CardContent>
-      </Card>
+    <div className="min-h-[70vh] w-full flex items-center justify-center bg-[#F8F5F0] px-5 py-20 text-center">
+      <div className="max-w-md mx-auto space-y-6">
+        <span className="eyebrow text-[#B69A76]">TEÒ LUXURY SKINCARE</span>
+        <h1 className="serif text-[42px] leading-tight text-[#302820] font-light">
+          Page Not Found
+        </h1>
+        <p className="text-[14px] text-[#82786D] leading-relaxed">
+          The page you are looking for may have moved or is no longer available.
+        </p>
+        <div className="pt-2">
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 bg-[#302820] text-[#F8F5F0] px-7 py-3.5 text-[11px] font-medium tracking-[0.16em] uppercase hover:bg-[#B69A76] transition-colors"
+          >
+            <ArrowLeft size={14} />
+            <span>Return to Homepage</span>
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }
